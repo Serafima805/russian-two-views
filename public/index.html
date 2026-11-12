@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Два взгляда · Two Views — beginner Russian listening</title>
+  <meta name="description" content="An information-gap listening game for beginning learners of Russian.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="top-inner">
+      <div>
+        <p class="eyebrow">Два взгляда · Two Views</p>
+        <h1 id="story-title" lang="ru">Встреча в кафе</h1>
+        <p id="story-title-en" class="sub">Meeting at the café</p>
+      </div>
+      <div class="top-actions">
+        <button id="restart" class="btn ghost" type="button">Start over</button>
+        <button id="new-story" class="btn" type="button">↻ New story</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="card intro">
+      <p id="scene" class="scene"></p>
+      <ol class="how">
+        <li><strong>Listen</strong> to both people. They tell the same story, but not in the same way.</li>
+        <li><strong>Ask</strong> each person up to <strong>3 questions</strong> in Russian. Press 🎤 and speak, or type. Tap a suggestion if you need help.</li>
+        <li><strong>Explain</strong> the differences in English.</li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="h-listen">
+      <h2 id="h-listen"><span class="step">1</span> Listen · Слушай</h2>
+      <div id="listen" class="grid2"></div>
+    </section>
+
+    <section aria-labelledby="h-ask">
+      <h2 id="h-ask"><span class="step">2</span> Ask · Спроси</h2>
+      <div id="ask" class="grid2"></div>
+    </section>
+
+    <section aria-labelledby="h-explain">
+      <h2 id="h-explain"><span class="step">3</span> Explain · Объясни</h2>
+      <div class="card">
+        <p id="explain-lock" class="hint">Ask each person at least one question first.</p>
+        <form id="explain-form">
+          <label for="explanation">In English: how are the two stories different? What was the misunderstanding?</label>
+          <textarea id="explanation" rows="5" maxlength="2000" placeholder="Anya says… but Maxim says…"></textarea>
+          <div class="row">
+            <button class="btn primary" type="submit">Check my answer</button>
+          </div>
+        </form>
+        <div id="feedback" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Answers, voices and feedback are made by AI and can contain mistakes.
+  </footer>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
